@@ -15,7 +15,6 @@ public class Portal : MonoBehaviour
         playerCam = Camera.main;
         portalCam = GetComponentInChildren<Camera>();
         portalCam.enabled = false;
-        Render();
     }
 
     private void CreateViewTexture()
@@ -35,8 +34,9 @@ public class Portal : MonoBehaviour
         }
     }
 
-    public void Render()
+    private void OnPreRender()
     {
+        Debug.Log("OnPreRender was called");
         portalScreen.enabled = false;
         CreateViewTexture();
         
