@@ -21,9 +21,16 @@ public class PortalTextureSetup : MonoBehaviour
             cameraA.targetTexture.Release();
         }
 
-        cameraA.targetTexture = new RenderTexture(Screen.width, Screen.height, 24);
+        var targetTextureA = new RenderTexture(Screen.width, Screen.height, 24);
+        targetTextureA.format = RenderTextureFormat.RGB111110Float;
+
+
+        cameraA.targetTexture = targetTextureA;
         cameraMatA.mainTexture = cameraA.targetTexture;
-        cameraB.targetTexture = new RenderTexture(Screen.width, Screen.height, 24);
+
+        var targetTextureB = new RenderTexture(Screen.width, Screen.height, 24);
+        targetTextureB.format = RenderTextureFormat.RGB111110Float;
+        cameraB.targetTexture = targetTextureB;
         cameraMatB.mainTexture = cameraB.targetTexture;
     }
 }
