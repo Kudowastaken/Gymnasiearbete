@@ -9,7 +9,7 @@ public class PortalTextureSetup : MonoBehaviour
     [SerializeField] private Material cameraMatA;
     [SerializeField] private Material cameraMatB;
     
-    void Start()
+    void Update()
     {
         if (cameraB.targetTexture != null)
         {
