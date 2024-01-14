@@ -15,8 +15,7 @@ public class CalculateObliqueProjectionMatrix : MonoBehaviour
         if (Invert)
         {
             plane = new Plane(-outTransform.forward, inTransform.position);
-        }
-        else
+        } else
         {
             plane = new Plane(outTransform.forward, inTransform.position);
         }
